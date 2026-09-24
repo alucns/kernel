@@ -83,8 +83,8 @@ on:
         type: choice
         options:
           - -ophub
-          - -happy-new-year
-          - -dragon-boat-festival
+          - -oes
+          - -smile
           - -mid-autumn-festival
           - -happy-national-day
           - -merry-christmas
@@ -92,7 +92,7 @@ on:
           - -summer-growing
           - -autumn-harvesting
           - -winter-storing
-          - -smile
+          - -yourname
       kernel_config:
         description: "Set the path of kernel .config"
         required: false
