@@ -182,6 +182,7 @@ jobs:
           sudo chown -R runner:runner /builder
           df -Th
           echo "status=success" >> ${GITHUB_OUTPUT}
+          export CC_VERSION_TEXT="aarch64-linux-gnu-gcc (Arm GNU 15.3)"
 
       - name: Get kernel source commit hash
         id: kernelhash
