@@ -182,7 +182,6 @@ jobs:
           sudo chown -R runner:runner /builder
           df -Th
           echo "status=success" >> ${GITHUB_OUTPUT}
-          export CC_VERSION_TEXT="aarch64-linux-gnu-gcc (Arm GNU 15.3)"
 
       - name: Get kernel source commit hash
         id: kernelhash
@@ -198,7 +197,8 @@ jobs:
           [[ -z "${source_hash}" || "${source_hash}" == "null" ]] && source_hash="${{ github.sha }}"
           echo "source_hash=${source_hash}" >> ${GITHUB_ENV}
           echo "status=success" >> ${GITHUB_OUTPUT}
-
+          export CC_VERSION_TEXT="aarch64-linux-gnu-gcc (Arm GNU 15.3)"
+          
       - name: Cache ccache
         uses: actions/cache@v5
         with:
