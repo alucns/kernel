@@ -1,6 +1,6 @@
 #==========================================================================
 # Description: Compile mainline stable kernel
-# Copyright (C) 2021 https://github.com/unifreq/openwrt_packit
+# Copyright (C) 2021 https://github.com/unifreq
 # Copyright (C) 2021 https://github.com/ophub/kernel
 #==========================================================================
 
@@ -197,8 +197,7 @@ jobs:
           [[ -z "${source_hash}" || "${source_hash}" == "null" ]] && source_hash="${{ github.sha }}"
           echo "source_hash=${source_hash}" >> ${GITHUB_ENV}
           echo "status=success" >> ${GITHUB_OUTPUT}
-          export CC_VERSION_TEXT="aarch64-linux-gnu-gcc (Arm GNU 15.3)"
-          
+
       - name: Cache ccache
         uses: actions/cache@v5
         with:
